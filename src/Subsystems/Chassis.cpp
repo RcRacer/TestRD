@@ -53,7 +53,7 @@ void Chassis::DriveWithJoysticks(){
 	if (Robot::oi->getGamepad()->GetRawButton(7)) {
 		solenoid->Set(false);
 	}
-	if (Robot::oi->getGamepad()->GetRawButton(4)) {
+	if (Robot::oi->getGamepad()->GetRawButton(8)) {
 		solenoid->Set(true);
 	}
 }
