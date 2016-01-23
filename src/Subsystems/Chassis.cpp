@@ -44,8 +44,8 @@ void Chassis::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void Chassis::DriveWithJoysticks(){
-	float left = (Robot::oi->getGamepad()->GetY()*Robot::oi->getGamepad()->GetY()*Robot::oi->getGamepad()->GetY())*-0.75;
-	float right = (Robot::oi->getGamepad()->GetThrottle()*Robot::oi->getGamepad()->GetThrottle()*Robot::oi->getGamepad()->GetThrottle())*-0.75;
+	float left = (Robot::oi->getGamepad()->GetY()*Robot::oi->getGamepad()->GetY()*Robot::oi->getGamepad()->GetY())*-1;
+	float right = (Robot::oi->getGamepad()->GetThrottle()*Robot::oi->getGamepad()->GetThrottle()*Robot::oi->getGamepad()->GetThrottle())*-1;
 
 	robotDrive41->TankDrive(left,right);
 }
