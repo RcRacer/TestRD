@@ -46,8 +46,9 @@ void Chassis::InitDefaultCommand() {
 // here. Call these from Commands.
 
 void Chassis::DriveWithJoysticks(){
-	float left = Robot::oi->getGamepad()->GetY();
-	float right = Robot::oi->getGamepad()->GetThrottle();
+	float left = Robot::oi->getGamepad()->GetY()*Robot::oi->getGamepad()->GetY()*Robot::oi->getGamepad()->GetY();
+	float right = Robot::oi->getGamepad()->GetThrottle()*Robot::oi->getGamepad()->GetThrottle()*Robot::oi->getGamepad()->GetThrottle();
+
 	robotDrive41->TankDrive(left,right);
 
 	if (Robot::oi->getGamepad()->GetRawButton(7)) {
