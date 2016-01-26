@@ -45,8 +45,8 @@ void Chassis::InitDefaultCommand() {
 void Chassis::DriveWithJoysticks(){
 	//float left =  (pow(Robot::oi->getleftJoy()->GetY()?Robot::oi->getleftJoy()->GetY():0,3))*-1;
 	//float right = (pow(Robot::oi->getrightJoy()->GetY()?Robot::oi->getrightJoy()->GetY():0,3))*-1;
-	float left =  ((Robot::oi->getleftJoy()->GetY()?Robot::oi->getleftJoy()->GetY():0))*-1;
-	float right = ((Robot::oi->getrightJoy()->GetY()?Robot::oi->getrightJoy()->GetY():0))*-1;
+	float left =  ((Robot::oi->getleftJoy()->GetY()>.1?Robot::oi->getleftJoy()->GetY():0))*-1;
+	float right = ((Robot::oi->getrightJoy()->GetY()>.1?Robot::oi->getrightJoy()->GetY():0))*-1;
 
 	robotDrive41->TankDrive(left,right);
 }
